@@ -23,7 +23,7 @@
         </div>
         <nav>
             <a href="../index.php">Home</a>
-            <a href="#">Tutoriel</a>
+            <a href="tutoriel.php">Tutoriel</a>
             <a href="#">À propos</a>
             <a href="contact.php">Contact</a>
             <a href="connexion.php" class="btn-compte">Mon compte</a>
