@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/dist/css/style.css" />
     <link rel="stylesheet" href="assets/dist/js/bootstrap.js" />
+    <script src="assets/dist/js/script.js"></script>
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +61,19 @@
                 </div>
             </div>
             <section class="right-section">
+            <div class="editor-container">
+                <h2>Éditeur d'Avatar</h2>
+                <div id="avatar" class="avatar-display"></div>
+                <br>
+                <label for="style-select">Choisir un style :</label>
+                    <select id="style-select">
+                        <option value="adventurer">Aventurier</option>
+                        <option value="bottts">Robot</option>
+                        <option value="avataaars">Avatars</option>
+                     <option value="micah">Micah</option>
+                    </select>
+                <button onclick="generateAvatar()">Générer un Avatar</button>
+                </div>
             <div class="preview-area"></div>
             <div class="colors-grid">
                 <div class="color-item"></div>

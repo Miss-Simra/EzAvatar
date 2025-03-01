@@ -234,6 +234,22 @@ main {
   color: white;
 }
 
+.editor-container {
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.avatar-display {
+width: 100px;
+height: 100px;
+margin: 20px auto;
+border-radius: 50%;
+background: lightgray; 
+}
+
 /* Section : Prévisualiser l'avatar */
 
 .right-section {
