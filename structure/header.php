@@ -16,11 +16,11 @@
 
   </head>
 
-  <header id="haut" class="container-fluid py-2">
+  <header class="container-fluid py-2 fixed-top bg-white shadow-sm">
     <div class="row align-items-center">
         <!-- Logo à gauche -->
         <div class="col-auto d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="LogoEZavatar" class="logo-img me-2">
+            <img src="../assets/img/logo.png" alt="LogoEZavatar" class="logo-img me-2">
             <span class="logo-text">EzAvatar</span>
         </div>
 
@@ -28,9 +28,9 @@
         <div class="col text-end me-3">
     <nav class="d-inline">
     <a href="../index.php" class="nav-link d-inline-block">Home</a>
-        <a href="pages/tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
+        <a href="tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
         <a href="#" class="nav-link d-inline-block">À propos</a>
-        <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
+        <a href="contact.php" class="nav-link d-inline-block">Contact</a>
       
     </nav>
 </div>
