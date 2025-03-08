@@ -25,109 +25,135 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   </head>
+  
   <body>
-    <header id="haut">
-        <div class="logo">
-            <img src="assets/img/logo.png" alt="LogoEZavatar">
-            <span>EzAvatar</span>
+  <header id="haut" class="container-fluid py-2 fixed-top bg-white shadow-sm">
+    <div class="row align-items-center">
+        <!-- Logo à gauche -->
+        <div class="col-auto d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="LogoEZavatar" class="logo-img me-2">
+            <span class="logo-text">EzAvatar</span>
         </div>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="pages/tutoriel.php">Tutoriel</a>
-            <a href="#">À propos</a>
-            <a href="pages/contact.php">Contact</a>
-            <?php if(!isConnecte()) : ?>
-            <a href="pages/connexion.php" class="btn-compte">Compte</a>
-            <?php else: ?>
-                <a href="pages/account.php" class="btn-compte">Mon compte</a>
-            <?php endif; ?> 
-        </nav>
-    </header>
+
+        <!-- Menu à droite -->
+        <div class="col text-end me-3">
+            <nav class="d-inline">
+                <a href="index.php" class="nav-link d-inline-block">Home</a>
+                <a href="pages/tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
+                <a href="#" class="nav-link d-inline-block">À propos</a>
+                <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
+                <?php if(!isConnecte()) : ?>
+                    <a href="pages/connexion.php" class="btn btn-primary ms-2">Compte</a>
+                <?php else: ?>
+                    <a href="pages/account.php" class="btn btn-primary ms-2">Mon compte</a>
+                <?php endif; ?>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
 
     <main>
-        <section class="left-section">
-            <div class="title">
-                <h1>
-                    Créer votre avatar<br>
-                    <span class="blue-text">personnalisé avec</span><br>
-                    <span class="highlight">EzAvatar</span>
-                </h1>
-            </div>
 
-            <div class="about">
-                <img src="assets/img/remplacercetteimageparlabonne.png" class="imagegauche" alt="LogoEZavatar">
-                <h2>À propos</h2>
-                <p>Altera sententia est, quasi definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum.</p>
-                <p>Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.</p>
-                <button class="btn-discover">Tout découvrir</button>
-            </div>
+<!-- Section 1 : Image + Titre -->
+<section class="left-section container-fluid">
+    <div class="row g-0 align-items-center">
+        <!-- Image à gauche, grande et collée au bord -->
+        <div class="col-12 col-md-6">
+            <img src="assets/img/image1.png" alt="Logo EZavatar" class="fullscreen-img">
+        </div>
+        <!-- Titre à droite, justifié à gauche -->
+        <div class="col-12 col-md-6 text-start px-5">
+            <h1>
+                <span class="avatar-text"> CRÉER VOTRE AVATAR</span>
+                <span class="blue-text"> PERSONNALISÉ AVEC</span>
+                <span class="highlight">EZAVATAR</span>
+            </h1>
+        </div>
+    </div>
+</section>
 
-            <div class="editor">
-                <h2>Éditeur</h2>
-                <div class="editor-buttons">
-                    <button class="editor-btn">Fond</button>
-                    <button class="editor-btn active">Visage</button>
-                    <button class="editor-btn">Yeux</button>
-                    <button class="editor-btn">Nez</button>
-                    <button class="editor-btn">Bouche</button>
-                    <button class="editor-btn">Cheveux</button>
-                </div>
-            </div>
-            <section class="right-section">
-            <div class="editor-container">
-                <h2>Éditeur d'Avatar</h2>
-                <div id="avatar" class="avatar-display"></div>
-                <br>
-                <label for="style-select">Choisir un style :</label>
-                    <select id="style-select">
-                        <option value="adventurer">Aventurier</option>
-                        <option value="bottts">Robot</option>
-                        <option value="avataaars">Avatars</option>
-                     <option value="micah">Micah</option>
-                    </select>
-                <button onclick="generateAvatar()">Générer un Avatar</button>
-                </div>
-            <div class="preview-area"></div>
-            <div class="colors-grid">
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item"></div>
-                <div class="color-item active"></div>
-            </div>
-            <div class="preview-navigation">
-                <button class="nav-arrow">←</button>
-                <span>1/2</span>
-                <button class="nav-arrow">→</button>
-            </div>
-        </section>
-        </section>
+
+<!-- Section 2 : À Propos -->
+<section class="degrade"> 
+    <section class="propos d-flex align-items-center justify-content-center min-vh-100">
+        <div class="about text-start">
+            <h2 class="display-3 fw-bold">À propos</h2>
+            <p class="fs-5">Ez Avatar, c'est la plateforme où créer un avatar unique devient facile et rapide. Que ce soit pour les jeux, 
+      les réseaux sociaux ou juste pour le fun, personnalisez votre image virtuelle
+       en quelques clics. Pas de prise de tête, juste un résultat à la hauteur de vos attentes. Créez, modifiez, et adoptez l'avatar qui vous ressemble !</p>
+            <button class="btn btn-prime btn-lg btn-discover d-inline-block">Tout découvrir</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Section 3 : Éditeur -->
+
+    <section class="right-section d-flex justify-content-center align-items-center min-vh-100">
+    <div class="editor-container card shadow-lg p-5 text-center">
+        <h2 class="mb-4 text-uppercase fw-bold gradient-text">Éditeur d'Avatar</h2>
+        
+        <!-- Avatar Display -->
+        <div id="avatar" class="avatar-display mx-auto mb-4"></div>
+
+        <!-- Sélection du style -->
+        <label for="style-select" class="form-label fs-5">Choisir un style :</label>
+        <select id="style-select" class="form-select form-control-lg stylish-select">
+            <option value="adventurer">Aventurier</option>
+            <option value="bottts">Robot</option>
+            <option value="avataaars">Avatars</option>
+            <option value="micah">Micah</option>
+        </select>
+
+        <!-- Bouton Générer -->
+        <div class="mt-4">
+            <button onclick="generateAvatar()" class="btn btn-custom btn-lg">Générer un Avatar </button>
+        </div>
+    </div>
+</section>
+</section>
+
+
+</section>
+
 
 
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="#">Mentions légales</a>
-            <span>|</span>
-            <a href="#">Politique de confidentialité</a>
-            <span>|</span>
-            <a href="#">Informations</a>
-        </div>
-        <div class="website-name">Copyright ©2025 <span>EzAvatar</span></div>
-        <div class="footer-buttons">
+    <footer class="footer d-flex justify-content-between align-items-center p-4">
+    
+    <!-- Mentions légales -->
+    <div class="footer-links">
+        <a href="#">Mentions légales</a>
+        <span>|</span>
+        <a href="#">Politique de confidentialité</a>
+        <span>|</span>
+        <a href="#">Informations</a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="website-name text-center">
+        Copyright ©2025 <span class="fw-bold">EzAvatar</span>
+    </div>
+
+    <!-- Boutons à droite -->
+    <div class="footer-buttons d-flex gap-3">
         <a href="#haut" class="footer-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
-        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-        <path fill="#FFFFFF" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a>
-            <a href ="pages/connexion.php" class="footer-btn">Compte</a>
-            <a href="pages/contact.php" class="footer-btn">Contact</a>
-        </div>
-    </footer>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                <path fill="#FFFFFF" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+            </svg>
+        </a>
+        <a href="pages/connexion.php" class="footer-btn">Compte</a>
+        <a href="pages/contact.php" class="footer-btn">Contact</a>
+    </div>
+
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2"></script>
   </body>

@@ -15,17 +15,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   </head>
-  <body>
-    <header id="haut">
-        <div class="logo">
-            <img src="../assets/img/logo.png" alt="LogoEZavatar">
-            <span>EzAvatar</span>
+
+  <header id="haut" class="container-fluid py-2">
+    <div class="row align-items-center">
+        <!-- Logo à gauche -->
+        <div class="col-auto d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="LogoEZavatar" class="logo-img me-2">
+            <span class="logo-text">EzAvatar</span>
         </div>
-        <nav>
-            <a href="../index.php">Home</a>
-            <a href="tutoriel.php">Tutoriel</a>
-            <a href="#">À propos</a>
-            <a href="contact.php">Contact</a>
-            <a href="connexion.php" class="btn-compte">Compte</a>
-        </nav>
-    </header>
+
+        <!-- Menu à droite -->
+        <div class="col text-end me-3">
+    <nav class="d-inline">
+    <a href="../index.php" class="nav-link d-inline-block">Home</a>
+        <a href="pages/tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
+        <a href="#" class="nav-link d-inline-block">À propos</a>
+        <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
+      
+    </nav>
+</div>
+
+
+    </div>
+</header>

@@ -1,360 +1,311 @@
-* {
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden; /* Évite un scroll horizontal inutile */
 }
 
-:root {
-  --blue-light: #61b3ff;
-  --blue-dark: #4466ee;
-  --orange: #ffb199;
+.container-fluid {
+  padding: 0;
+  margin: 0;
 }
 
-/* Fonts */
 
-.poppins-bold {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: normal;
-}
 
-.montserrat {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
 
-/* Communs */
-
-body {
-  min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--blue-light) 0%,
-    var(--blue-dark) 100%
-  );
-  overflow-x: hidden;
-  font-size: 16px;
-  font-family: "Montserrat", serif;
-  font-weight: 500;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1,
-h2 {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-ul {
-  list-style: none inside none;
-}
-
-/* Textes/titres/buttons majuscule */
-
-.logo,
-.title,
-h2,
-.btn-discover,
-.footer-btn,
-.website-name > span {
-  text-transform: uppercase;
-}
-
-/* Header */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 20px 40px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo img {
-  width: 32px;
-  height: 32px;
+/* Ajustement du logo */
+.logo-img {
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 48px;
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-nav a {
-  text-transform: uppercase;
-  text-decoration: none;
+.col-auto.d-flex.align-items-center {
+  margin-left: 20px; 
+}
+
+/* Ajustement du menu */
+nav .nav-link {
   color: black;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 0 20px; /* Plus d'espace entre les éléments */
+  text-transform: uppercase; /* Texte en majuscules */
+  margin-left: 15px; /* Éloigner un peu du bord */
 }
 
-.btn-compte {
-  background: var(--blue-light);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
+nav .nav-link:hover {
+  color: blue;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #4c79fb, #76a9ff);
   border: none;
-  font-size: 14px;
+  transition: all 0.3s ease-in-out; /* Transition pour tous les effets */
 }
 
-/* Formulaire de connexion */
-
-.form_login {
-  width: 100%;
-  padding: 40px;
-  background: white;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.btn-primary:hover {
+  transform: scale(1.1) translateY(-3px); /* Agrandissement et déplacement vers le haut */
+  box-shadow: 0px 5px 15px rgba(0, 0, 255, 0.3); /* Ombre */
 }
 
-/* Contenu principal */
 
-.imagegauche {
-  width: 500px;
-}
 
-main {
-  padding: 40px;
-  display: flex;
-}
+
+
+
+
+
+/* Image et Titre */
 
 .left-section {
+  margin-bottom:15rem;
+}
+.fullscreen-img {
+  margin-top:5rem;
   width: 50%;
-  padding-right: 40px;
+  height: auto; 
+  position: absolute; 
+  top: -30px; 
+  left: 0; 
+  z-index: 1; 
+  border-radius: 0 100px 100px 0; 
+  border-top: 30px solid white; 
+  border-right: 30px solid white; 
+  border-bottom: 30px solid white; 
+  border-left: none; 
 }
 
-.title {
-  margin-top: 40px;
-  margin-left: 1400px;
+h1 {
+  margin-top:14rem;
+  font-size: 3rem;
+  font-weight: bold;
+  max-width:70%;
 }
 
-.title h1 {
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 20px;
+/* Section Dégradé */
+.degrade {
+  background: linear-gradient(135deg, #4C79FB, #4DE1FC);
+  padding-bottom: 50px; 
+  padding-top: 100px; 
+  position: relative;
+  z-index: 0;
 }
 
-.title .blue-text {
-  color: var(--blue-dark);
+
+.avatar-text {
+  color: #007bff; 
+  font-weight: bold; 
 }
 
-.title .highlight {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 2px 8px;
-  border-radius: 4px;
-}
 
-/* Section : A propos */
+
+
+
+/* Section À propos */
+.propos {
+  position: relative; /* Pour que la section se place correctement avec l'image */
+  color: white; /* Texte blanc */
+}
 
 .about {
-  margin-top: 80px;
+  max-width: 800px; /* Limite la largeur du texte */
+  position: relative; /* Pour positionner le highlight derrière le texte */
+  z-index: 1; /* S'assure que le texte est au-dessus du highlight */
 }
 
 .about h2 {
-  font-size: 24px;
-  margin-bottom: 40px;
-  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative; /* Positionner le titre pour qu'il soit au-dessus du highlight */
+  margin-bottom:1rem;
 }
 
-.about h2::after {
-  content: "";
+.about h2::before {
+  content: ''; /* Crée un élément avant le texte */
   position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: white;
-}
+  bottom: -5px; /* Décalage vertical du highlight en bas */
+  left: 1%; /* Décalage horizontal à droite du titre */
+  width: 27%; /* Réduit la largeur du highlight */
+  height: 30px; /* Hauteur du highlight */
+  background: #8CBEFD; /* Couleur du highlight */
+  z-index: -1; /* Met le highlight derrière le texte */
 
-.about p {
-  color: rgba(0, 0, 0, 0.7);
-  line-height: 1.6;
-  margin-bottom: 20px;
 }
 
 .btn-discover {
-  color: var(--blue-dark);
-  background: none;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
+  color: #ffffff; /* Couleur bleue du texte */
+  font-size: 1.2rem;
+  text-decoration: underline; /* Souligner le texte */
+  text-align: left; 
+  margin-left:-15px;
 }
 
-/* Section : Editer les avatars */
-
-.editor {
-  margin-top: 60px;
+.btn-discover:hover {
+  color: #6e8dad; /* Couleur bleu plus foncé au survol */
 }
 
-.editor h2 {
-  font-size: 24px;
-  margin-bottom: 40px;
-  position: relative;
-}
 
-.editor h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: white;
-}
 
-.editor-buttons {
-  display: flex;
-  gap: 16px;
-}
 
-.editor-btn {
-  padding: 8px 20px;
-  border-radius: 50px;
-  border: none;
-  background: white;
-  font-size: 14px;
-}
 
-.editor-btn.active {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
+/*Editeur*/
 
-.editor-container {
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  width: 300px;
-  border-radius: 10px;
-}
-
-.avatar-display {
-width: 100px;
-height: 100px;
-margin: 20px auto;
-border-radius: 50%;
-background: lightgray; 
-}
-
-/* Section : Prévisualiser l'avatar */
-
+/* 🎨 Style général */
 .right-section {
-  width: 50%;
+  padding: 60px 20px;
+}
+
+/* 🎭 Effet néon et glow */
+.editor-container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 40px;
-  background: white;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.preview-area {
-  aspect-ratio: 1;
-  background: #f5f5f5;
-  border-radius: 30px;
-  margin-bottom: 30px;
-}
-
-.colors-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.color-item {
-  aspect-ratio: 1;
-  background: #f5f5f5;
-  border-radius: 16px;
-}
-
-.color-item.active {
-  background: var(--orange);
-  position: relative;
-}
-
-.color-item.active::after {
-  content: "#FFB199";
-  position: absolute;
-  bottom: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.preview-navigation {
+/* 🌀 Avatar Stylisé */
+.avatar-display {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #d7e7ff, #e6f1ff);
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin-top: 40px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease-in-out;
 }
 
-.nav-arrow {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.5);
+.avatar-display:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
-/* Footer */
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  margin-top: 80px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: white;
+/* 🏆 Texte avec effet coloré */
+.gradient-text {
+  background: linear-gradient(45deg, #2d9aff, #0c5acf, #2d9aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
 }
 
-.footer-links {
-  display: flex;
-  gap: 16px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
+/* 🏗️ Select Custom */
+.stylish-select {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 
+.stylish-select:hover {
+  border-color: #042a70;
+}
+
+
+
+/* Bouton personnalisé */
+.btn-custom {
+  background: transparent;
+  color: #000000;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: 2px solid #6F9EC9;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-custom::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1; /* Flash passe derrière les lettres */
+}
+
+.btn-custom:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.btn-custom:hover {
+  color: rgb(39, 73, 104);
+  border-color: #4CACFA;
+  transform: scale(1.1); /* Le bouton grandit */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+.btn-custom span {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+/* 📌 Footer Général */
+.footer {
+  background: white;
+  color: #333; /* Gris foncé pour les mots */
+  font-size: 16px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* 🔗 Liens du footer */
 .footer-links a {
-  color: inherit;
+  color: rgba(51, 51, 51, 0.8); /* Gris foncé mais léger pour les liens */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-buttons {
-  display: flex;
-  gap: 16px;
+.footer-links a:hover {
+  color: #0056b3; /* Bleu foncé au survol */
 }
 
-.footer-btn {
-  background: var(--blue-light);
+/* 🔥 Copyright stylé */
+.website-name {
+  font-weight: bold;
+  font-size: 17px;
+  color: #333; /* Gris foncé pour le nom du site */
+}
+
+/* Boutons footer */
+.footer-buttons .footer-btn {
+  background: linear-gradient(90deg, #4c79fb, #76a9ff);
   color: white;
-  padding: 8px 20px;
-  border-radius: 50px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
   border: none;
-  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-buttons .footer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.3); 
+}
+
+/* Icône Retour Haut */
+.footer-buttons svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-buttons a:hover svg {
+  transform: scale(1.2);
 }
