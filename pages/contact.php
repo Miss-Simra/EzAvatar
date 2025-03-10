@@ -1,5 +1,7 @@
 <?php include '../structure/header.php'; ?>
 
+<section class="bg_contact"> 
+
     <form method="POST">
         <div class="container">
             <div class="row justify-content-center m-5">
@@ -21,5 +23,7 @@
             </div>
         </div>
     </form>
+
+</section>
 
 <?php include '../structure/footer.php'; ?>
