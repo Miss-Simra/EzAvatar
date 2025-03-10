@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 03 mars 2025 à 16:17
+-- Généré le : dim. 09 mars 2025 à 16:56
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `bdd`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `admin`
+--
+
+INSERT INTO `admin` (`id`, `email`, `mot_de_passe`) VALUES
+(1, 'admin@ezavatar.com', '$2y$10$YMQXzGefeIEHQejroowtleQoKg4Yx26w34HMEQUwAc2TAVs24L37G');
 
 -- --------------------------------------------------------
 
