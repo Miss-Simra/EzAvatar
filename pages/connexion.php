@@ -7,25 +7,12 @@
     // Définitions des fonctions utilisées plusieurs fois 
     require '../inc/inc.functions.php';
 
-    // Lors de la soumission du formulaire
-    if($_POST 
-        && count($_POST) 
-            && array_key_exists('login', $_POST) && array_key_exists('mdp', $_POST)
-                && !empty($_POST['login']) && !empty($_POST['mdp'])){
 
-            //~ Mauvais login
-            if($_POST['login'] !== "etudiant"){
-                adddMessageAlert("Le login est incorrect.");
-            }else if($_POST['mdp'] !== "cvtic"){
-                adddMessageAlert("Le mot de passe est incorrect.");
-            }else{
-                //~ Des données issues d'un formulaire de connexion sont transmises
-                setConnecte($_POST['login'], $_POST['mdp']);
-            }
-    }
 ?>
-            <?php lireEtSupprimeMessageSession();?>
+         
             
+<section class="bg_login"> 
+
             <?php if(!isConnecte()) : ?>
                 <form method="POST">
                         <div class="container">
@@ -54,6 +41,8 @@
                 <?php include 'account.php'; ?>
             <?php endif; ?> 
 		</div>
-	</div>
+	</div>   
+
+</section>
 
 <?php include '../structure/footer.php'; ?>
