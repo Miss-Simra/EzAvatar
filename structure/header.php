@@ -29,7 +29,7 @@
     <nav class="d-inline">
     <a href="../index.php" class="nav-link d-inline-block">Home</a>
         <a href="tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
-        <a href="#" class="nav-link d-inline-block">À propos</a>
+        <a href="../index.php#a_propos" class="nav-link d-inline-block">À propos</a>
         <a href="contact.php" class="nav-link d-inline-block">Contact</a>
       
     </nav>
