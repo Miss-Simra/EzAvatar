@@ -40,13 +40,14 @@
             <nav class="d-inline">
                 <a href="index.php" class="nav-link d-inline-block">Home</a>
                 <a href="pages/tutoriel.php" class="nav-link d-inline-block">Tutoriel</a>
-                <a href="#" class="nav-link d-inline-block">À propos</a>
+                <a href="#a_propos" class="nav-link d-inline-block">À propos</a>
                 <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
                 <?php if(!isConnecte()) : ?>
                     <a href="pages/connexion.php" class="btn btn-primary ms-2">Compte</a>
                 <?php else: ?>
                     <a href="pages/account.php" class="btn btn-primary ms-2">Mon compte</a>
                 <?php endif; ?>
+                <a href="pages/admin.php" class="nav-link d-inline-block">Admin</a>
             </nav>
         </div>
     </div>
@@ -76,7 +77,7 @@
 
 
 <!-- Section 2 : À Propos -->
-<section class="degrade"> 
+<section class="degrade" id="a_propos"> 
     <section class="propos d-flex align-items-center justify-content-center min-vh-100">
         <div class="about text-start">
             <h2 class="display-3 fw-bold">À propos</h2>
