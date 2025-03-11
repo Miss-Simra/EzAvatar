@@ -47,7 +47,7 @@
                 <?php else: ?>
                     <a href="pages/account.php" class="btn btn-primary ms-2">Mon compte</a>
                 <?php endif; ?>
-                <a href="pages/admin.php" class="nav-link d-inline-block">Admin</a>
+                <!-- <a href="pages/admin.php" class="nav-link d-inline-block">Admin</a> -->
             </nav>
         </div>
     </div>
