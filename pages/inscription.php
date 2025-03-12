@@ -2,9 +2,6 @@
 
 <?php 
 
-    // Définitions des fonctions utilisées plusieurs fois 
-    require '../inc/inc.functions.php';
-
     // Fichier connexion à la BDD 
     require '../inc/inc.connexion.php';
 
