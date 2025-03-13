@@ -30,7 +30,7 @@
                                         <div class="form-group mb-3">
                                         <a href="" class="mt-2">Mot de passe oublié ?</a>
                                         </div>
-                                        <a href="inscription.php" class="mt-2">Vous n'avez pas de compte ?</a>
+                                        <a href="registration.php" class="mt-2">Vous n'avez pas de compte ?</a>
                                 </div>
                             </div>
                         </div>
