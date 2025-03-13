@@ -2,11 +2,11 @@
     
     <!-- Mentions légales -->
     <div class="footer-links">
-        <a href="#">Mentions légales</a>
+        <a href="legal_notice.php">Mentions légales</a>
         <span>|</span>
-        <a href="#">Politique de confidentialité</a>
+        <a href="privacy_policy.php">Politique de confidentialité</a>
         <span>|</span>
-        <a href="#">Informations</a>
+        <a href="informations.php">Informations</a>
     </div>
 
     <!-- Copyright -->
