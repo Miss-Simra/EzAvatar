@@ -100,7 +100,11 @@
         <h2 class="mb-4 text-uppercase fw-bold gradient-text">Éditeur d'Avatar</h2>
         
         <!-- Avatar Display -->
-        <div id="avatar" class="avatar-display mx-auto mb-4"></div>
+        <div id="avatar-container" class="avatar-display mx-auto mb-4">
+            <div id="avatar"></div>
+        </div>
+
+
 
         <!-- Sélection du style -->
         <label for="style-select" class="form-label fs-5">Choisir un style :</label>
@@ -110,11 +114,28 @@
             <option value="avataaars">Avatars</option>
             <option value="micah">Micah</option>
         </select>
-
-        <!-- Bouton Générer -->
-        <div class="mt-4">
-            <button onclick="generateAvatar()" class="btn btn-custom btn-lg">Générer un Avatar </button>
+        
+        <!-- sélection des options -->
+        <div class="custom-option" data-option="hairColor">
+            <label for="hair-color-select" class="form-label fs-5">Couleur des cheveux :</label>
+            <input type="color" id="hair-color-select" class="form-control form-control-color" value="#000000">
         </div>
+
+        <div class="custom-option" data-option="skinColor">
+            <label for="skin-color-select" class="form-label fs-5">Couleur de peau :</label>
+            <input type="color" id="skin-color-select" class="form-control form-control-color" value="#ffcc99">
+        </div>
+
+        <div class="custom-option">
+            <label for="background-color-select" class="form-label fs-5">Couleur du fond :</label>
+            <input type="color" id="background-color-select" class="form-control form-control-color" value="#ffffff">
+        </div>
+
+        <!-- bouton Générer -->
+        <div class="mt-4">
+            <button onclick="generateAvatar()" class="btn btn-custom btn-lg" id="generate-btn">Générer un Avatar </button>
+        </div>
+
     </div>
 </section>
 </section>
