@@ -100,6 +100,14 @@ h1 {
   z-index: 0;
 }
 
+.bg_password {
+  background: linear-gradient(135deg, #4c79fb, #4de1fc);
+  padding-bottom: 222px;
+  padding-top: 222px;
+  position: relative;
+  z-index: 0;
+}
+
 .bg_inscription {
   background: linear-gradient(135deg, #4c79fb, #4de1fc);
   padding-bottom: 181px;
