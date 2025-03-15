@@ -14,8 +14,6 @@
     <title>EzAvatar</title>
     <link rel="stylesheet" href="assets/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/dist/css/style.css" />
-    <link rel="stylesheet" href="assets/dist/js/bootstrap.js" />
-    <script src="assets/dist/js/script.js"></script>
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,11 +138,6 @@
 </section>
 </section>
 
-
-</section>
-
-
-
     </main>
 
     <footer class="footer d-flex justify-content-between align-items-center p-4">
@@ -171,7 +164,8 @@
 
 </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2"></script>
+    <script src="assets/dist/js/script.js"></script>
+    <script src="assets/dist/js/bootstrap.js"></script>
   </body>
 </html>
