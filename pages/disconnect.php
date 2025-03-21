@@ -4,11 +4,8 @@
     session_start(); 
 
     //~ Définitons des fonctions
-    include '../inc.functions.php';
+    include '../inc/inc.functions.php';
 
     setDeconnecte();
-
-    header('Location: index.php');
-    exit();
     
 ?>
