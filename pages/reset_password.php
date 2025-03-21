@@ -1,4 +1,4 @@
-<?php include '../structure/header.php'; ?>
+
 
 <?php
 
@@ -49,6 +49,8 @@
         }
 
 ?>
+
+<?php include '../structure/header.php'; ?>
 
 <section class="bg_password"> 
     <form method="POST">
