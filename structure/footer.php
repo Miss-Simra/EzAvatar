@@ -1,3 +1,10 @@
+<?php
+
+// Définitions des fonctions utilisées plusieurs fois 
+require '../inc/inc.functions.php';
+
+?>
+
 <footer class="footer d-flex justify-content-between align-items-center p-4">
     
     <!-- Mentions légales -->
@@ -16,7 +23,11 @@
 
     <!-- Boutons à droite -->
     <div class="footer-buttons d-flex gap-3">
-        <a href="connexion.php" class="footer-btn">Compte</a>
+    <?php if(!isConnecte()) : ?>
+        <a href="login.php" class="footer-btn">Compte</a>
+    <?php else: ?>
+        <a href="account.php" class="footer-btn">Mon compte</a>
+    <?php endif; ?>
         <a href="contact.php" class="footer-btn">Contact</a>
     </div>
 
