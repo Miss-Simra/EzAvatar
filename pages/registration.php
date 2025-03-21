@@ -1,4 +1,3 @@
-<?php include '../structure/header.php'; ?>
 
 <?php 
 
@@ -79,13 +78,19 @@
     
                     $messages[] = "<div class='text-success text-center'>Votre compte a bien été créé.</div>";
 
+                    // Ajoute un délai de 2 sec avant de rediriger vers la page connexion
+                    echo "<meta http-equiv='refresh' content='2;url=login.php'>";
                 }
-            }
-        } else {
+                } 
+            } else {
             $messages[] = "Veuillez remplir tous les champs.";
         }
     }
+       
     ?>
+
+<?php include '../structure/header.php'; ?>
+
     
     <section class="bg_inscription">
         <form method="POST">
