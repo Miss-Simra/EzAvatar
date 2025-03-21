@@ -5,14 +5,12 @@
 		Permet de vérifier qu'un utilisateur est connecté
 		à partir de la SESSION
 	 */
-	function isConnecte(){
-		if($_SESSION 
-			&& count($_SESSION) 
-				&& array_key_exists('login', $_SESSION)
-					&& !empty($_SESSION['login'])){
-			return true;
-		}else{
-			return false;
+	function isConnecte() {
+		// Vérifie si une session est active et si user_id est défini et non vide
+		if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+			return true; // Utilisateur connecté
+		} else {
+			return false; // Aucune session active
 		}
 	}
 
@@ -22,11 +20,12 @@
 		les données en SESSION
 	 */	
 	function setDeconnecte(){
+		session_unset();
 		session_destroy();
-		unset($_SESSION);
+		header('Location: ../index.php');
 		exit;
 	}
-
+	
 	/*
 		Fonction addMessageAlert
 		Ajoute un message en session qui sera affiché 
