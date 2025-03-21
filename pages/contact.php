@@ -1,6 +1,6 @@
-<?php include '../structure/header.php'; ?>
-
 <?php
+
+session_start();
 
 // Fichier connexion à la BDD 
 require '../inc/inc.connexion.php';
@@ -64,6 +64,8 @@ require '../inc/inc.connexion.php';
  }
 
 ?>
+
+<?php include '../structure/header.php'; ?>
 
 <section class="bg_contact"> 
 
