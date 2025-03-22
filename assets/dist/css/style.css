@@ -340,3 +340,9 @@ h1 {
   height: 100%;
   object-fit: cover; /* ajuste l'avatar sans déborder car à la base, le svg est un carré généré */
 }
+
+#avatars-container2 img {
+  width: 190px; /* ajuste la taille des avatars */
+  height: 190px;
+  object-fit: cover;
+}
