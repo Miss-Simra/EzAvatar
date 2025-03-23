@@ -32,5 +32,8 @@ require_once '../inc/inc.functions.php';
     </div>
 
 </footer>
+  </body>
+</html>
+
 
 
