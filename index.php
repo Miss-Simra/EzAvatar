@@ -7,6 +7,7 @@
 
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -94,7 +95,7 @@
 
     <!-- Section 3 : Éditeur -->
 
-    <section class="right-section d-flex justify-content-center align-items-center min-vh-100">
+    <section class="right-section d-flex justify-content-center align-items-center min-vh-100" id="editor">
     <div class="editor-container card shadow-lg p-5 text-center">
         <h2 class="mb-4 text-uppercase fw-bold gradient-text">Éditeur d'Avatar</h2>
         
