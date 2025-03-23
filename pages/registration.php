@@ -2,16 +2,23 @@
 <?php 
 
     // Fichier connexion à la BDD 
-    require '../inc/inc.connexion.php';
+    require_once '../inc/inc.connexion.php';
 
     // Lors de la soumission du formulaire 
 
     if (isset($_POST['submit'])) {
         $messages = [];
     
+        // Vérification des champs (vides ou non)
+
         if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-            $nom = htmlspecialchars($_POST['nom']);
-            $email = htmlspecialchars($_POST['email']);
+
+            // Récupère ces champs via le formulaire 
+            // TRIM : supression des espaces inutiles 
+            // HTMLSPECIALCHARS : connvertit certains caractères prédéfinis en entités HTML
+
+            $nom = htmlspecialchars(trim($_POST['nom']));
+            $email = htmlspecialchars(trim($_POST['email']));
             $password = $_POST['password'];   
     
             // Vérification de la taille du nom (30 caractères max)
@@ -61,9 +68,9 @@
             if (empty($messages)) {
     
                 // Vérifie si l'email est déjà utilisé
-                $testmail = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+                $testmail = $pdo->prepare("SELECT 1 FROM users WHERE email = ?");
                 $testmail->execute([$email]);
-    
+                
                 if ($testmail->rowCount() > 0) {
                     $messages[] = "Cette adresse mail est déjà utilisée.";
                 } else {
@@ -120,7 +127,7 @@
                                     ?>
                                 </div>
                             <?php endif; ?>
-                            
+
                         </div>
                     </div>
                 </div>
