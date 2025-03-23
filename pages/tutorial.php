@@ -8,12 +8,12 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutoriel - EzAvatar</title>
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/dist/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<?php include '../structure/header.php'; ?>
+
+<div class="bg_tutorial"> 
 <main class="container tutoriel-container mt-5">
     <h1 class="text-center">Tutoriel : Créez votre avatar facilement</h1>
 
@@ -36,9 +36,9 @@ session_start();
         <a href="../index.php#editor" class="btn btn-primary btn-lg tutoriel-btn">Créer mon avatar maintenant !</a>
     </div>
 </main>
+</div>
 
-</body>
-</html>
-
-<?php include '../structure/header.php'; ?>
 <?php include '../structure/footer.php'; ?>
+
+
+
