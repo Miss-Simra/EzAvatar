@@ -159,9 +159,9 @@
     <!-- Boutons à droite -->
     <div class="footer-buttons d-flex gap-3">
     <?php if(!isConnecte()) : ?>
-        <a href="login.php" class="footer-btn">Compte</a>
+        <a href="pages/login.php" class="footer-btn">Compte</a>
     <?php else: ?>
-        <a href="account.php" class="footer-btn">Mon compte</a>
+        <a href="pages/account.php" class="footer-btn">Mon compte</a>
     <?php endif; ?>
         <a href="pages/contact.php" class="footer-btn">Contact</a>
     </div>
