@@ -4,7 +4,7 @@
 session_start();
 
 // Fichier connexion à la BDD 
-require '../inc/inc.connexion.php';
+require_once '../inc/inc.connexion.php';
 
 // Lors de la soumission du formulaire 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
     // Vérification des champs (vides ou non)
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $email = htmlspecialchars($_POST['email']);
+
+        // Récupère ces champs via le formulaire 
+        // TRIM : supression des espaces inutiles 
+        // HTMLSPECIALCHARS : connvertit certains caractères prédéfinis en entités HTML
+        
+        $email = htmlspecialchars(trim($_POST['email']));
         $password = $_POST['password'];
     
         // Requête pour récupérer l'utilisateur par son email
