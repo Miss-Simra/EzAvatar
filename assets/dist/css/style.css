@@ -346,3 +346,158 @@ h1 {
   height: 190px;
   object-fit: cover;
 }
+
+
+
+
+
+
+
+/*Page tutoriel*/
+
+/* Style spécifique au tutoriel */
+.tutoriel-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal du tutoriel */
+.tutoriel-container h1 {
+  font-weight: 600;
+  color: #343a40;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Sections du tutoriel */
+.tutoriel-section {
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.tutoriel-section:hover {
+  background: #dee2e6;
+}
+
+/* Titres des sections */
+.tutoriel-section h2 {
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Texte du tutoriel */
+.tutoriel-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Bouton du tutoriel */
+.tutoriel-btn {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.tutoriel-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Page Avatar random */
+
+
+/* Style pour le conteneur des avatars */
+#avatars-container2 {
+  margin-top: 20px;
+}
+
+/* Style pour chaque avatar */
+.avatar-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Style pour les inputs de couleur */
+.form-control-color {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* Style pour le bouton de génération */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.text-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement (si nécessaire) */
+  width: 100%; /* Prend toute la largeur disponible */
+}
+
+h1.display-4 {
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem !important;
+  width: 100%; /* Prend toute la largeur */
+  text-align: center; /* Double assurance pour le centrage */
+}
+
+p.lead {
+  font-family: 'Arial', sans-serif;
+  color: #6c757d; /* Couleur grise plus douce */
+  margin-bottom: 1rem;
+  width: 100%; /* Prend toute la largeur */
+  text-align: center; /* Double assurance pour le centrage */
+}
+
+p.fst-italic {
+  font-family: 'Georgia', serif;
+  color: #6c757d;
+  font-size: 0.9rem;
+  width: 100%; /* Prend toute la largeur */
+  text-align: center; /* Double assurance pour le centrage */
+}

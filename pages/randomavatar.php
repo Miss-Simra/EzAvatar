@@ -27,23 +27,24 @@ shuffle($styles);
 
 <?php include '../structure/header.php'; ?>
 
-<main class="container mt-5">
-    <h1>10 Avatars Aléatoires !</h1>
-    <p>Voici 10 avatars générés aléatoirement avec des styles aléatoires !</p>
-    <p>Notez que certaines couleurs ne peuvent pas fonctionner sur certains styles d'avatars</p>
+<main class="container mt-5 mb-5">
+    <div class="text-middle"> 
+        <h1 class="display-4 fw-bold text-primary mb-4">10 Avatars Aléatoires !</h1>
+        <p class="lead fs-5 text-secondary mb-3">Voici 10 avatars générés aléatoirement avec des styles aléatoires !</p>
+        <p class="text-muted fst-italic">Notez que certaines couleurs ne peuvent pas fonctionner sur certains styles d'avatars</p>
+        </div>
 
-    <div class="row row-cols-5 g-1" id="avatars-container2">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4" id="avatars-container2">
         <!-- contiens les avatars générés -->
     </div>
 
     <div class="text-center mt-4">
-    <button id="generate-btn" class="btn btn-primary">Générer de nouveaux avatars</button>
+        <button id="generate-btn" class="btn btn-primary btn-lg">Générer de nouveaux avatars</button>
     </div>
 </main>
 
 <?php include '../structure/footer.php'; ?>
 
-<!-- je peut pas mettre de code php dans mon fichier javascript donc je le met ici -->
 <script>
     const styles = <?php echo json_encode($styles); ?>;
 </script>
