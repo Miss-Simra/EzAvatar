@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,6 +26,7 @@
     </style>
   </head>
 
+  <body>
   <header class="container-fluid py-2 fixed-top bg-white shadow-sm">
     <div class="row align-items-center">
         <!-- Logo à gauche -->
