@@ -1,7 +1,7 @@
 <?php
 
 // Définitions des fonctions utilisées plusieurs fois 
-require '../inc/inc.functions.php';
+require_once '../inc/inc.functions.php';
 
 ?>
 
