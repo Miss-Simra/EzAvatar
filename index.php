@@ -38,6 +38,7 @@
             <nav class="d-inline">
                 <a href="index.php" class="nav-link d-inline-block">Home</a>
                 <a href="pages/tutorial.php" class="nav-link d-inline-block">Tutoriel</a>
+                <a href="pages/randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
                 <a href="#a_propos" class="nav-link d-inline-block">À propos</a>
                 <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
                 <?php if(!isConnecte()) : ?>
