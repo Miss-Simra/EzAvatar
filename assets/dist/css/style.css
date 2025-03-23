@@ -76,7 +76,23 @@ h1 {
   max-width: 70%;
 }
 
-/* Section Contact & Compte */
+/* Section Tuto, Random Avatar, Contact, Compte */
+
+.bg_tutorial {
+  background: linear-gradient(135deg, #4c79fb, #4de1fc);
+  padding-bottom: 120px;
+  padding-top: 120px;
+  position: relative;
+  z-index: 0;
+}
+
+.bg_random {
+  background: linear-gradient(135deg, #4c79fb, #4de1fc);
+  padding-bottom: 120px;
+  padding-top: 120px;
+  position: relative;
+  z-index: 0;
+}
 
 .form_login {
   background-color: #ffffff;
@@ -368,12 +384,6 @@ h1 {
   object-fit: cover;
 }
 
-
-
-
-
-
-
 /*Page tutoriel*/
 
 /* Style spécifique au tutoriel */
@@ -429,18 +439,7 @@ h1 {
   background-color: #0056b3;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Page Avatar random */
-
 
 /* Style pour le conteneur des avatars */
 #avatars-container2 {
@@ -500,15 +499,16 @@ h1 {
 }
 
 h1.display-4 {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem !important;
+  margin-top: 0;
   width: 100%; /* Prend toute la largeur */
   text-align: center; /* Double assurance pour le centrage */
 }
 
 p.lead {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #6c757d; /* Couleur grise plus douce */
   margin-bottom: 1rem;
   width: 100%; /* Prend toute la largeur */
@@ -516,7 +516,7 @@ p.lead {
 }
 
 p.fst-italic {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   color: #6c757d;
   font-size: 0.9rem;
   width: 100%; /* Prend toute la largeur */
