@@ -3,17 +3,23 @@
 session_start();
 
 // Fichier connexion à la BDD 
-require '../inc/inc.connexion.php';
+require_once '../inc/inc.connexion.php';
 
 // Lors de la soumission du formulaire 
 
  if (isset($_POST['submit'])) {
     $messages = [];
 
+    // Vérification des champs (vides ou non)
     if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['note'])) {
-        $nom = htmlspecialchars($_POST['nom']);
-        $email = htmlspecialchars($_POST['email']);
-        $note = htmlspecialchars($_POST['note']);   
+
+        // Récupère ces champs via le formulaire 
+        // TRIM : supression des espaces inutiles 
+        // HTMLSPECIALCHARS : connvertit certains caractères prédéfinis en entités HTML
+
+        $nom = htmlspecialchars(trim($_POST['nom']));
+        $email = htmlspecialchars(trim($_POST['email']));
+        $note = htmlspecialchars(trim($_POST['note']));   
 
         // Vérification de la taille du nom (30 caractères max)
         if (strlen($nom) > 30) {
