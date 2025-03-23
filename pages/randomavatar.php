@@ -20,14 +20,13 @@ shuffle($styles);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avatars Aléatoires - EzAvatar</title>
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/dist/css/style.css">
 </head>
 <body>
 
 <?php include '../structure/header.php'; ?>
 
-<main class="container mt-5 mb-5">
+<div class="bg_random">
+<main class="container mt-5 mb-5 bg-white p-5 rounded-3">
     <div class="text-middle"> 
         <h1 class="display-4 fw-bold text-primary mb-4">10 Avatars Aléatoires !</h1>
         <p class="lead fs-5 text-secondary mb-3">Voici 10 avatars générés aléatoirement avec des styles aléatoires !</p>
@@ -42,6 +41,7 @@ shuffle($styles);
         <button id="generate-btn" class="btn btn-primary btn-lg">Générer de nouveaux avatars</button>
     </div>
 </main>
+</div>
 
 <?php include '../structure/footer.php'; ?>
 
