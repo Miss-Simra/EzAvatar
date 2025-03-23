@@ -13,7 +13,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <style>
+        /* BG de la page reset_password */
+        .bg_password {
+            background: linear-gradient(135deg, #4c79fb, #4de1fc);
+            padding-bottom: <?= $isUserConnected ? '240px' : '215px' ?>;
+            padding-top: <?= $isUserConnected ? '240px' : '215px' ?>;
+            position: relative;
+            z-index: 0;
+        }
+    </style>
   </head>
 
   <header class="container-fluid py-2 fixed-top bg-white shadow-sm">
