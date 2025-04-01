@@ -26,7 +26,7 @@
     </style>
   </head>
 
-  <body>
+
   <header class="container-fluid py-2 fixed-top bg-white shadow-sm">
     <div class="row align-items-center">
         <!-- Logo à gauche -->
@@ -35,18 +35,38 @@
             <span class="logo-text">EzAvatar</span>
         </div>
 
-        <!-- Menu à droite -->
-        <div class="col text-end me-3">
-    <nav class="d-inline">
-    <a href="../index.php" class="nav-link d-inline-block">Home</a>
-        <a href="tutorial.php" class="nav-link d-inline-block">Tutoriel</a>
-        <a href="randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
-        <a href="../index.php#a_propos" class="nav-link d-inline-block">À propos</a>
-        <a href="contact.php" class="nav-link d-inline-block">Contact</a>
-      
-    </nav>
+        <!-- Bouton hamburger visible en mobile -->
+        <div class="col text-end d-lg-none">
+            <button id="menuToggle" class="btn btn-primary">☰</button>
+        </div>
+
+        <!-- Menu principal (desktop) -->
+        <div class="col-lg text-end me-3 d-none d-lg-block">
+            <nav>
+                <a href="../index.php" class="nav-link d-inline-block">Home</a>
+                <a href="tutorial.php" class="nav-link d-inline-block">Tutoriel</a>
+                <a href="randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
+                <a href="../index.php#a_propos" class="nav-link d-inline-block">À propos</a>
+                <a href="contact.php" class="nav-link d-inline-block">Contact</a>
+                <a href="login.php" class="btn btn-primary ms-2">Compte</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Menu mobile en plein écran -->
+<div id="mobileMenu" class="menu-overlay">
+    <div class="menu-content">
+        <button id="closeMenu" class="close-btn">✖</button>
+        <a href="../index.php">Home</a>
+        <a href="tutorial.php">Tutoriel</a>
+        <a href="randomavatar.php">Avatars et styles aléatoire</a>
+        <a href="../index.php#a_propos">À propos</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.php" class="btn btn-primary mt-3">Compte</a>
+    </div>
 </div>
 
 
-    </div>
-</header>
+<script src="../assets/dist/js/script.js" defer></script>
+

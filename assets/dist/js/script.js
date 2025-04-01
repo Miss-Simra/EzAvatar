@@ -1,3 +1,50 @@
+
+// menu
+
+document.getElementById("menuToggle").addEventListener("click", function() {
+    document.getElementById("mobileMenu").style.display = "flex";
+});
+
+document.getElementById("closeMenu").addEventListener("click", function() {
+    document.getElementById("mobileMenu").style.display = "none";
+});
+
+document.getElementById("mobileMenu").addEventListener("click", function(e) {
+    if (e.target === this) {
+        this.style.display = "none";
+    }
+});
+
+
+//responsive 
+
+window.addEventListener("resize", function () {
+    let img = document.querySelector(".fullscreen-img");
+    let title = document.querySelector("h1");
+
+    if (window.innerWidth <= 768) {
+        img.style.width = "100%";
+        img.style.height = "auto";
+        img.style.position = "static";
+        img.style.border = "none";
+        img.style.borderRadius = "0";
+        img.style.margin = "0";
+        img.style.padding = "0";
+
+        title.style.textAlign = "center";
+        title.style.fontSize = "2rem";
+        title.style.maxWidth = "100%";
+        title.style.marginTop = "1rem";
+    }
+});
+
+
+
+
+
+
+
+
 function updateOptionsVisibility() {
     const style = document.getElementById("style-select").value;
     

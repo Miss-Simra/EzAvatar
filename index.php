@@ -26,6 +26,8 @@
   </head>
   
   <body>
+
+
   <header class="container-fluid py-2 fixed-top bg-white shadow-sm">
     <div class="row align-items-center">
         <!-- Logo à gauche -->
@@ -34,24 +36,58 @@
             <span class="logo-text">EzAvatar</span>
         </div>
 
-        <!-- Menu à droite -->
-        <div class="col text-end me-3">
-            <nav class="d-inline">
+        <!-- Bouton hamburger visible en mobile -->
+        <div class="col text-end d-lg-none">
+            <button id="menuToggle" class="btn btn-primary">☰</button>
+        </div>
+
+        <!-- Menu principal (desktop) -->
+        <div class="col-lg text-end me-3 d-none d-lg-block">
+            <nav>
                 <a href="index.php" class="nav-link d-inline-block">Home</a>
                 <a href="pages/tutorial.php" class="nav-link d-inline-block">Tutoriel</a>
                 <a href="pages/randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
                 <a href="#a_propos" class="nav-link d-inline-block">À propos</a>
                 <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
-                <?php if(!isConnecte()) : ?>
-                    <a href="pages/login.php" class="btn btn-primary ms-2">Compte</a>
-                <?php else: ?>
-                    <a href="pages/account.php" class="btn btn-primary ms-2">Mon compte</a>
-                <?php endif; ?>
-                <!-- <a href="pages/admin.php" class="nav-link d-inline-block">Admin</a> -->
+                <a href="pages/login.php" class="btn btn-primary ms-2">Compte</a>
             </nav>
         </div>
     </div>
 </header>
+
+<!-- Menu mobile en plein écran -->
+<div id="mobileMenu" class="menu-overlay">
+    <div class="menu-content">
+        <button id="closeMenu" class="close-btn">✖</button>
+        <a href="index.php">Home</a>
+        <a href="pages/tutorial.php">Tutoriel</a>
+        <a href="pages/randomavatar.php">Avatars et styles aléatoire</a>
+        <a href="#a_propos">À propos</a>
+        <a href="pages/contact.php">Contact</a>
+        <a href="pages/login.php" class="btn btn-primary mt-3">Compte</a>
+    </div>
+</div>
+
+
+<!-- Menu mobile en plein écran -->
+<div id="mobileMenu" class="menu-overlay">
+    <div class="menu-content">
+        <button id="closeMenu" class="close-btn">✖</button>
+        <a href="index.php">Home</a>
+        <a href="pages/tutorial.php">Tutoriel</a>
+        <a href="pages/randomavatar.php">Avatars et styles aléatoire</a>
+        <a href="#a_propos">À propos</a>
+        <a href="pages/contact.php">Contact</a>
+        <?php if(!isConnecte()) : ?>
+            <a href="pages/login.php" class="btn btn-primary mt-3">Compte</a>
+        <?php else: ?>
+            <a href="pages/account.php" class="btn btn-primary mt-3">Mon compte</a>
+        <?php endif; ?>
+    </div>
+</div>
+
+
+
 
 
 
@@ -60,11 +96,11 @@
 <!-- Section 1 : Image + Titre -->
 <section class="left-section container-fluid">
     <div class="row g-0 align-items-center">
-        <!-- Image à gauche, grande et collée au bord -->
+     
         <div class="col-12 col-md-6">
             <img src="assets/img/image1.png" alt="Logo EZavatar" class="fullscreen-img">
         </div>
-        <!-- Titre à droite, justifié à gauche -->
+    
         <div class="col-12 col-md-6 text-start px-5">
             <h1>
                 <span class="avatar-text"> CRÉER VOTRE AVATAR</span>

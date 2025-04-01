@@ -49,6 +49,64 @@ nav .nav-link:hover {
   box-shadow: 0px 5px 15px rgba(0, 0, 255, 0.3); /* Ombre */
 }
 
+
+/* Menu mobile en plein écran */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 255, 0.95); /* Bleu avec légère transparence */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenu du menu */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Liens du menu */
+.menu-content a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu-content a:hover {
+  color: #ffcc00;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Image et Titre */
 
 .left-section {
@@ -75,6 +133,36 @@ h1 {
   font-weight: bold;
   max-width: 70%;
 }
+
+
+/* responsive */
+
+@media (max-width: 1024px) {
+  .fullscreen-img {
+      width: 100% !important;  /* L'image prend toute la largeur */
+      height: auto !important; /* Garder le ratio */
+      position: static !important; /* Supprime position absolute */
+      border: none !important; /* Supprime les bordures */
+      border-radius: 0 !important; /* Supprime les arrondis */
+      margin: 0 !important; /* Supprime marges inutiles */
+      padding: 0 !important;
+  }
+
+  h1 {
+      text-align: center !important; /* Centre le texte */
+      font-size: 2rem !important; /* Ajuste la taille */
+      max-width: 100% !important;
+      margin-top: 1rem !important; /* Ajuste l'espacement */
+  }
+
+  .left-section {
+    margin-bottom: 5rem;
+  }
+}
+
+
+
+
 
 /* Section Tuto, Random Avatar, Contact, Compte */
 
@@ -209,6 +297,48 @@ h1 {
   color: #6e8dad; /* Couleur bleu plus foncé au survol */
 }
 
+/*responsive*/
+
+@media (max-width: 768px) {
+  .propos {
+      text-align: center !important; /* Centre tout le texte */
+      padding: 3rem 1rem !important; /* Ajoute un padding pour éviter que le texte colle aux bords */
+  }
+
+  .about {
+      max-width: 100% !important; /* Permet au texte de prendre toute la largeur disponible */
+      padding: 0 1rem !important; /* Ajoute un peu d’espace sur les côtés */
+  }
+
+  .about h2 {
+      font-size: 2rem !important; /* Réduit la taille du titre */
+  }
+
+  .about h2::before {
+      width: 40% !important; /* Ajuste la largeur du highlight */
+      height: 20px !important; /* Réduit la hauteur */
+      bottom: -3px !important; /* Ajuste le placement */
+  }
+
+  .about p {
+      font-size: 1rem !important; /* Réduit la taille du texte pour une meilleure lecture */
+  }
+
+  .btn-discover {
+      display: block !important; /* Fait passer le bouton en mode bloc */
+      margin: 1.5rem auto !important; /* Centre le bouton horizontalement */
+      text-align: center !important; /* Centre le texte du bouton */
+  }
+
+  .degrade {
+    margin-top: 3 rem;
+    padding-top: 2rem;
+  }
+}
+
+
+
+
 /*Editeur*/
 
 /* 🎨 Style général */
@@ -310,33 +440,35 @@ h1 {
   z-index: 1;
 }
 
-/* 📌 Footer Général */
+
+
+
+/* Footer Général */
 .footer {
   background: white;
-  color: #333; /* Gris foncé pour les mots */
+  color: #333;
   font-size: 16px;
-  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔗 Liens du footer */
 .footer-links a {
-  color: rgba(51, 51, 51, 0.8); /* Gris foncé mais léger pour les liens */
+  color: rgba(51, 51, 51, 0.8); 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #0056b3; /* Bleu foncé au survol */
+  color: #0056b3; 
 }
 
-/* 🔥 Copyright stylé */
+
 .website-name {
   font-weight: bold;
   font-size: 17px;
-  color: #333; /* Gris foncé pour le nom du site */
+  color: #333; 
 }
 
-/* Boutons footer */
+
 .footer-buttons .footer-btn {
   background: linear-gradient(90deg, #4c79fb, #76a9ff);
   color: white;
@@ -352,7 +484,7 @@ h1 {
   box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.3);
 }
 
-/* Icône Retour Haut */
+
 .footer-buttons svg {
   transition: transform 0.3s ease-in-out;
 }
@@ -360,6 +492,37 @@ h1 {
 .footer-buttons a:hover svg {
   transform: scale(1.2);
 }
+
+/*responsive footer*/
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column !important; /* Empile les éléments verticalement */
+      text-align: center !important; /* Centre le texte */
+      gap: 1rem !important; /* Ajoute de l’espace entre les sections */
+  }
+
+  .footer-links {
+      display: flex !important;
+      flex-direction: column !important; /* Place les liens sur plusieurs lignes */
+      gap: 0.5rem !important; /* Espacement entre les liens */
+  }
+
+  .footer-links span {
+      display: none !important; /* Supprime les séparateurs | en version mobile */
+  }
+
+  .footer-buttons {
+      flex-direction: column !important; /* Empile les boutons */
+      align-items: center !important; /* Centre les boutons */
+  }
+}
+
+
+
+
+
+/*section avatar */
 
 #avatar-container {
   width: 150px; /* taille du cercle */
