@@ -115,7 +115,7 @@
             <option value="micah">Micah</option>
         </select>
         
-        <!-- sélection des options -->
+        <!-- Sélection des options -->
         <div class="custom-option" data-option="hairColor">
             <label for="hair-color-select" class="form-label fs-5">Couleur des cheveux :</label>
             <input type="color" id="hair-color-select" class="form-control form-control-color" value="#000000">
@@ -131,9 +131,9 @@
             <input type="color" id="background-color-select" class="form-control form-control-color" value="#ffffff">
         </div>
 
-        <!-- bouton Générer -->
+        <!-- Bouton : Générer un avatar -->
         <div class="mt-4">
-            <button onclick="generateAvatar()" class="btn btn-custom btn-lg" id="generate-btn">Générer un Avatar </button>
+            <button onclick="generateAvatar()" class="btn btn-custom btn-lg" id="generate-btn">Générer un Avatar</button>
         </div>
 
     </div>
