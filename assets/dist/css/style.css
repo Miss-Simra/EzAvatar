@@ -522,3 +522,21 @@ p.fst-italic {
   width: 100%; /* Prend toute la largeur */
   text-align: center; /* Double assurance pour le centrage */
 }
+
+/* Mentions légales */
+
+.bg_notice {
+  background: linear-gradient(135deg, #4c79fb, #4de1fc);
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.bg_info {
+  background: linear-gradient(135deg, #4c79fb, #4de1fc);
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.text-justify {
+  text-align: justify;
+}
