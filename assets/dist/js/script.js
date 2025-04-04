@@ -111,3 +111,29 @@ document
 
 // quand c'est chargé, vérifie la fonction
 updateOptionsVisibility();
+
+
+function downloadSVG() {
+  const avatarContainer = document.getElementById("avatar");
+  const svgContent = avatarContainer.innerHTML;
+
+  if (!svgContent) {
+    alert("Veuillez d'abord générer un avatar !");
+    return;
+  }
+
+  const blob = new Blob([svgContent], { type: "image/svg+xml;charset=utf-8" });
+
+  // créer une URL de téléchargement
+  const url = URL.createObjectURL(blob);
+
+  // créer un lien temporaire pour telecharger
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "ezavatar.svg"; // nom du fichier de base
+  document.body.appendChild(link);
+  link.click();
+
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
