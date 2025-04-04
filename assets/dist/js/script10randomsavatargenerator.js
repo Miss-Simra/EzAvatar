@@ -39,10 +39,16 @@ function loadRandomAvatars() {
     bgColorInput.value = "#ffffff";
     bgColorInput.addEventListener("input", () => updateAvatar(img));
 
+    const downloadBtn = document.createElement("button");
+    downloadBtn.classList.add("btn", "btn-primary", "mt-2");
+    downloadBtn.innerText = "Télécharger l'avatar";
+    downloadBtn.addEventListener("click", () => downloadAvatar(img));
+
     avatarDiv.appendChild(img);
     avatarDiv.appendChild(hairColorInput);
     avatarDiv.appendChild(skinColorInput);
     avatarDiv.appendChild(bgColorInput);
+    avatarDiv.appendChild(downloadBtn);
 
     container.appendChild(avatarDiv);
   }
@@ -75,6 +81,25 @@ function updateAvatar(img) {
 
     img.src = `https://api.dicebear.com/7.x/${style}/svg?${params.toString()}`;
   }, 300); // attendre 300ms avant de mettre à jour l'avatar pour éviter que l'utilisateur spam
+}
+
+function downloadAvatar(img) {
+  const url = img.src;
+  const style = img.dataset.style;
+  const seed = img.dataset.seed;
+  const fileName = `avatar_${style}_${seed}.svg`;
+
+  fetch(url)
+    .then(response => response.blob())
+    .then(blob => {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+    .catch(error => console.error("Erreur lors du téléchargement:", error));
 }
 
 // quand la page est chargée, exécute la fonction
