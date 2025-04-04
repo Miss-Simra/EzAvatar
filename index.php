@@ -172,6 +172,11 @@
             <button onclick="generateAvatar()" class="btn btn-custom btn-lg" id="generate-btn">Générer un Avatar</button>
         </div>
 
+        <!-- Bouton : Télécharger l'avatar en SVG -->
+        <div class="mt-4">
+        <button class="btn btn-custom btn-lg" id="btn-download-svg">Télécharger en SVG</button>
+        </div>
+
     </div>
 </section>
 </section>
