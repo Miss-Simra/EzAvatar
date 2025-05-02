@@ -49,7 +49,11 @@
                 <a href="pages/randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
                 <a href="#a_propos" class="nav-link d-inline-block">À propos</a>
                 <a href="pages/contact.php" class="nav-link d-inline-block">Contact</a>
-                <a href="pages/login.php" class="btn btn-primary ms-2">Compte</a>
+                <?php if(!isConnecte()) : ?>
+                    <a href="pages/login.php" class="btn btn-primary ms-2">Compte</a>
+                <?php else: ?>
+                    <a href="pages/account.php" class="btn btn-primary ms-2">Mon compte</a>
+                <?php endif; ?>
             </nav>
         </div>
     </div>
@@ -64,7 +68,11 @@
         <a href="pages/randomavatar.php">Avatars et styles aléatoire</a>
         <a href="#a_propos">À propos</a>
         <a href="pages/contact.php">Contact</a>
+        <?php if(!isConnecte()) : ?>
         <a href="pages/login.php" class="btn btn-primary mt-3">Compte</a>
+        <?php else: ?>
+        <a href="pages/account.php" class="btn btn-primary mt-3">Mon compte</a>
+        <?php endif; ?>
     </div>
 </div>
 

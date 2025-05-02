@@ -1,3 +1,10 @@
+<?php
+
+// Définitions des fonctions utilisées plusieurs fois 
+require_once '../inc/inc.functions.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +55,11 @@
                 <a href="randomavatar.php" class="nav-link d-inline-block">Avatars et styles aléatoire</a>
                 <a href="../index.php#a_propos" class="nav-link d-inline-block">À propos</a>
                 <a href="contact.php" class="nav-link d-inline-block">Contact</a>
-                <a href="login.php" class="btn btn-primary ms-2">Compte</a>
+                <?php if(!isConnecte()) : ?>
+                    <a href="login.php" class="btn btn-primary ms-2">Compte</a>
+                <?php else: ?>
+                    <a href="account.php" class="btn btn-primary ms-2">Mon compte</a>
+                <?php endif; ?>
             </nav>
         </div>
     </div>
@@ -63,7 +74,11 @@
         <a href="randomavatar.php">Avatars et styles aléatoire</a>
         <a href="../index.php#a_propos">À propos</a>
         <a href="contact.php">Contact</a>
-        <a href="login.php" class="btn btn-primary mt-3">Compte</a>
+        <?php if(!isConnecte()) : ?>
+            <a href="login.php" class="btn btn-primary ms-2">Compte</a>
+        <?php else: ?>
+            <a href="account.php" class="btn btn-primary ms-2">Mon compte</a>
+        <?php endif; ?>
     </div>
 </div>
 
